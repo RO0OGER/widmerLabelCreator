@@ -4,6 +4,12 @@ import ch.iet_gibb.model.CubicTank;
 import ch.iet_gibb.model.CylindricalTank;
 import ch.iet_gibb.model.Tank;
 
+/**
+ * @author Roger Widmer
+ * @version 1.0
+ * @since 1.0.0
+ */
+
 public class HeatCalculator {
 
     /**

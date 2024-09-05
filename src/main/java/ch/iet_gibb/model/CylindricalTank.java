@@ -1,4 +1,9 @@
 package ch.iet_gibb.model;
+/**
+ * @author Roger Widmer
+ * @version 1.0
+ * @since 1.0.0
+ */
 
 /**
  * Die Klasse CylindricalTank repräsentiert einen zylindrischen Tank.
