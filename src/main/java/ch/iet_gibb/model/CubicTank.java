@@ -1,7 +1,7 @@
 package ch.iet_gibb.model;
 
 /**
- * Die Klasse CubicTank repräsentiert einen Tank mit kubischer Form.
+ * Die Klasse CubicTank repräsentiert einen würfelförmigen Tank.
  */
 public class CubicTank {
     /**
@@ -60,12 +60,12 @@ public class CubicTank {
     }
 
     /**
-     * Berechnet das Volumen des Tanks basierend auf seinen Abmessungen.
+     * Berechnet das Volumen des würfelförmigen Tanks basierend auf seinen Abmessungen.
      *
      * @return Das Volumen des Tanks in Litern.
      */
     public int calculateSquareTankVolumeInLiters() {
-        return (int) (width * length * height / (double) 1000);
+        return (int) (length * width * height / (double) 1000);
     }
 
     /**
@@ -102,8 +102,23 @@ public class CubicTank {
                 "Maximale Temperatur: " + maxTemperature + "Grad Celsius";
     }
 
-    // Setter mit Validierungen:
+    // Getter und Setter:
 
+    /**
+     * Gibt die maximale Temperatur des Tanks zurück.
+     *
+     * @return Die maximale Temperatur.
+     */
+    public float getMaxTemperature() {
+        return maxTemperature;
+    }
+
+    /**
+     * Setzt die maximale Temperatur des Tanks.
+     *
+     * @param maxTemperature Die maximale Temperatur des Tanks.
+     * @throws IllegalArgumentException Wenn die Temperatur unter 30 Grad Celsius liegt.
+     */
     public void setMaxTemperature(float maxTemperature) {
         if (maxTemperature < 30) {
             throw new IllegalArgumentException("Maximale Temperatur darf nicht unter 30 Grad Celsius liegen.");
@@ -111,6 +126,21 @@ public class CubicTank {
         this.maxTemperature = maxTemperature;
     }
 
+    /**
+     * Gibt den Namen des Tanks zurück.
+     *
+     * @return Der Name des Tanks.
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Setzt den Namen des Tanks.
+     *
+     * @param name Der Name des Tanks.
+     * @throws IllegalArgumentException Wenn der Name leer oder null ist.
+     */
     public void setName(String name) {
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name darf nicht leer sein.");
@@ -118,6 +148,43 @@ public class CubicTank {
         this.name = name;
     }
 
+    /**
+     * Gibt das Volumen des Tanks zurück.
+     *
+     * @return Das Volumen des Tanks in Litern.
+     */
+    public float getVolume() {
+        return volume;
+    }
+
+    /**
+     * Setzt das Volumen des Tanks.
+     *
+     * @param volume Das Volumen des Tanks in Litern.
+     * @throws IllegalArgumentException Wenn das Volumen kleiner oder gleich null ist.
+     */
+    public void setVolume(float volume) {
+        if (volume <= 0) {
+            throw new IllegalArgumentException("Volumen muss größer als 0 sein.");
+        }
+        this.volume = volume;
+    }
+
+    /**
+     * Gibt die tägliche Energie des Tanks zurück.
+     *
+     * @return Die tägliche Energie in kWh.
+     */
+    public float getDailyEnergy() {
+        return dailyEnergy;
+    }
+
+    /**
+     * Setzt die tägliche Energie des Tanks.
+     *
+     * @param dailyEnergy Die tägliche Energie in kWh.
+     * @throws IllegalArgumentException Wenn die tägliche Energie kleiner oder gleich null ist.
+     */
     public void setDailyEnergy(float dailyEnergy) {
         if (dailyEnergy <= 0) {
             throw new IllegalArgumentException("Tägliche Energie muss größer als 0 sein.");
@@ -125,6 +192,21 @@ public class CubicTank {
         this.dailyEnergy = dailyEnergy;
     }
 
+    /**
+     * Gibt die Länge des Tanks zurück.
+     *
+     * @return Die Länge des Tanks in cm.
+     */
+    public float getLength() {
+        return length;
+    }
+
+    /**
+     * Setzt die Länge des Tanks.
+     *
+     * @param length Die Länge des Tanks in cm.
+     * @throws IllegalArgumentException Wenn die Länge kleiner oder gleich null ist.
+     */
     public void setLength(float length) {
         if (length <= 0) {
             throw new IllegalArgumentException("Länge muss größer als 0 sein.");
@@ -132,6 +214,21 @@ public class CubicTank {
         this.length = length;
     }
 
+    /**
+     * Gibt die Breite des Tanks zurück.
+     *
+     * @return Die Breite des Tanks in cm.
+     */
+    public float getWidth() {
+        return width;
+    }
+
+    /**
+     * Setzt die Breite des Tanks.
+     *
+     * @param width Die Breite des Tanks in cm.
+     * @throws IllegalArgumentException Wenn die Breite kleiner oder gleich null ist.
+     */
     public void setWidth(float width) {
         if (width <= 0) {
             throw new IllegalArgumentException("Breite muss größer als 0 sein.");
@@ -139,39 +236,25 @@ public class CubicTank {
         this.width = width;
     }
 
+    /**
+     * Gibt die Höhe des Tanks zurück.
+     *
+     * @return Die Höhe des Tanks in cm.
+     */
+    public float getHeight() {
+        return height;
+    }
+
+    /**
+     * Setzt die Höhe des Tanks.
+     *
+     * @param height Die Höhe des Tanks in cm.
+     * @throws IllegalArgumentException Wenn die Höhe kleiner oder gleich null ist.
+     */
     public void setHeight(float height) {
         if (height <= 0) {
             throw new IllegalArgumentException("Höhe muss größer als 0 sein.");
         }
         this.height = height;
-    }
-
-    // Getter
-    public float getMaxTemperature() {
-        return maxTemperature;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public float getVolume() {
-        return volume;
-    }
-
-    public float getDailyEnergy() {
-        return dailyEnergy;
-    }
-
-    public float getLength() {
-        return length;
-    }
-
-    public float getWidth() {
-        return width;
-    }
-
-    public float getHeight() {
-        return height;
     }
 }
