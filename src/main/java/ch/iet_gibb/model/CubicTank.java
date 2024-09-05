@@ -1,12 +1,11 @@
 package ch.iet_gibb.model;
-/**
- * @author Roger Widmer
- * @version 1.0
- * @since 1.0.0
- */
 
 /**
  * Die Klasse CubicTank repräsentiert einen würfelförmigen Tank.
+ *
+ * @author Roger Widmer
+ * @version 1.0
+ * @since 1.0.0
  */
 public class CubicTank {
     /**

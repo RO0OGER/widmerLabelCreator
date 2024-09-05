@@ -9,7 +9,6 @@ import ch.iet_gibb.model.Tank;
  * @version 1.0
  * @since 1.0.0
  */
-
 public class HeatCalculator {
 
     /**

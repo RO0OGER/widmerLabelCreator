@@ -1,13 +1,11 @@
 package ch.iet_gibb.model;
-/**
- * @author Roger Widmer
- * @version 1.0
- * @since 1.0.0
- */
-
 
 /**
  * Die Klasse Tank repräsentiert einen allgemeinen Tank.
+ *
+ * @author Roger Widmer
+ * @version 1.0
+ * @since 1.0.0
  */
 public class Tank {
     /**
