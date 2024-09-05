@@ -60,7 +60,7 @@ public class CubicTank {
         setLength(length);
         setWidth(width);
         setHeight(height);
-        this.volume = calculateSquareTankVolumeInLiters();
+        setVolume(calculateSquareTankVolumeInLiters());
     }
 
     /**

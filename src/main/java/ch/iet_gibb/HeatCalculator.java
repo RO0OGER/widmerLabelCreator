@@ -27,12 +27,12 @@ public class HeatCalculator {
         CylindricalTank cylindricalTank = new CylindricalTank(80, "Lisbeth", 400, 100, 200);
 
         // Ausgabe des CylindricalTank-Objekts
-        System.out.println(cylindricalTank.toString());
+        System.out.println(cylindricalTank);
 
         // Ausgabe des CubicTank-Objekts
-        System.out.println(cubicTank.toString());
+        System.out.println(cubicTank);
 
         // Ausgabe des Tank-Objekts
-        System.out.println(tank.toString());
+        System.out.println(tank);
     }
 }
